@@ -1,0 +1,163 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-image: url('../img/home-bg.jpg');
+    background-size: cover; /* Scale the image to cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Make the background stay fixed on scroll */
+    background-position: center; /* Center the image */
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(28, 20, 54, 0.5);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    margin-right: auto;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    width: 10px;
+}
+
+.logo img {
+    height: 70px; 
+    width: auto;  
+    object-fit: contain; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Typing Animation Section */
+.intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Full height minus navbar */
+    text-align: center;
+    color: white;
+}
+
+.intro-container h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.intro-container p {
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+.highlight {
+    color: #a48fff;
+}
+
+.typing-text {
+    color: #884ed5;
+    font-weight: bold;
+    border-right: 2px solid white;
+    animation: blink 0.7s step-end infinite;
+}
+
+h1 {
+    font-family: 'pacifico', cursive;
+    font-size: 10em;
+    background: linear-gradient(to right, #9b59b6, #8e44ad); /* Purple Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle Shadow */
+    animation: glow 2s infinite alternate; /* Optional Glow */
+}
+.intro-container p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    background: linear-gradient(to right, #bd93f9, #6272a4); /* Soft Purple Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+.typing-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    background: linear-gradient(to right, #bd93f9, #6272a4); /* Soft Purple Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Glow Animation */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #8e44ad, 0 0 20px #9b59b6, 0 0 30px #8e44ad;
+    }
+    100% {
+        text-shadow: 0 0 20px #8e44ad, 0 0 30px #9b59b6, 0 0 40px #8e44ad;
+    }
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 200px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}

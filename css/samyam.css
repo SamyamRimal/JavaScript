@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #2e3b4e;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(28, 20, 54, 0.8);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-color: #00bcd4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+/* About Section */
+.about, .skills, .projects, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2, .skills h2, .projects h2, .contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.skills ul {
+    list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.skills ul li {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #2e3b4e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Typing Effect */
+#typing-text {
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.1em solid #fff;
+    animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}

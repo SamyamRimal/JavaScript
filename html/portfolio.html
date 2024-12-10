@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jaro:opsz@6..72&family=Oswald:wght@200..700&family=Pacifico&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="../img/logo.png" alt=""></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro-section">
+        <div class="intro-container">
+            <h1>Hi! I am <span class="highlight">Samyam Rimal</span></h1>
+            <p>a <span class="typing-text"></span></p>
+        </div>
+    </section>
+
+    <script>
+        const roles = ['Educator', 'Software Developer', 'Java Programmer', 'Technology Enthusiast'];
+        let roleIndex = 0;
+        let charIndex = 0;
+
+        const typingElement = document.querySelector('.typing-text');
+
+        function type() {
+            if (charIndex < roles[roleIndex].length) {
+                typingElement.textContent += roles[roleIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100); // Typing speed
+            } else {
+                setTimeout(erase, 2000); // Pause before erasing
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 50); // Erasing speed
+            } else {
+                roleIndex = (roleIndex + 1) % roles.length; // Move to the next role
+                setTimeout(type, 500); // Pause before typing the next role
+            }
+        }
+
+        // Start the animation
+        document.addEventListener('DOMContentLoaded', () => {
+            type();
+        });
+    </script>
+</body>
+</html>
