@@ -1,7 +1,9 @@
 function calculateFactorial() {
     const number = parseInt(document.getElementById('numberInput').value);
+    const resultElement = document.getElementById('result');
+
     if (isNaN(number) || number < 0) {
-        document.getElementById('result').textContent = "Please enter a non-negative integer.";
+        resultElement.textContent = "Please enter a non-negative integer.";
         return;
     }
 
@@ -10,5 +12,5 @@ function calculateFactorial() {
         factorial *= i;
     }
 
-    document.getElementById('result').textContent = `The factorial of ${number} is ${factorial}.`;
+    resultElement.textContent = `The factorial of ${number} is ${factorial}.`;
 }
