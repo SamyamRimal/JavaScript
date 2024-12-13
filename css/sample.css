@@ -1,0 +1,90 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(90deg, #6a1b9a, #4a148c);
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #6a1b9a;
+    padding: 10px 0;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Section */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.intro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: #6a1b9a;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #4a148c;
+    color: white;
+    margin-top: 20px;
+}
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header, footer {
+        font-size: 1.2rem;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+}
